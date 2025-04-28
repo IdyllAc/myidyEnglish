@@ -22,7 +22,7 @@ func main() {
 	// Initialize the database
 	godotenv.Load()
 	var err error
-	db, err = sql.Open("sqlite3", "./subscribers.db")
+	db, err = sql.Open("sqlite3", "./DB_subscribers")
 	if err != nil {
 		log.Fatal(err)
 	}
