@@ -163,7 +163,8 @@ ______________________________________
 }
 
 h2 {
-	color: whitesmoke;
+	text-align: left;
+	color: bisque;
 }
 
 
@@ -176,6 +177,7 @@ h3 {
 h4 {
 	color: bisque;
     text-align: center; 
+	font-weight: lighter;
 }
 
 
@@ -224,8 +226,7 @@ h4 {
     margin-left: 0;
     margin-right: 0;
     color:whitesmoke;
-    justify-items: center;
-	font-size: 2vh;
+	font-size: 1.5vh;
 	font-weight: lighter;
 	text-align-last: left;			
 }  
