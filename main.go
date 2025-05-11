@@ -40,19 +40,19 @@ func main() {
 	// Initialize OAuth providers
 	goth.UseProviders(
 		facebook.New(
-			os.Getenv("1434024407761899"), // FACEBOOK_KEY
-			os.Getenv("43f419c89eca3a49850f35ee74ad35d5"), // FACEBOOK_SECRET
+			os.Getenv("FACEBOOK_KEY"), 
+			os.Getenv("FACEBOOK_SECRET"), 
 			"http://localhost:8080/auth/facebook/callback",
 		),
 		google.New(
-			os.Getenv("94664221445-9d18a15ki3oakeeventoi84nv9crpbsm.apps.googleusercontent.com"), // GOOGLE_KEY
-			os.Getenv("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"), // GOOGLE_SECRET
+			os.Getenv("GOOGLE_KEY"), 
+			os.Getenv("GOOGLE_SECRET"),
 			"http://localhost:8080/auth/google/callback",
 			"email", "profile",
 		),
 		github.New(
-			os.Getenv("Ov23lilOzTHdUUe7juVc"), // GITHUB_KEY
-			os.Getenv("784a15a587d84eed5e22333f4f50335e46284e48"), // ITHUB_SECRET
+			os.Getenv("GITHUB_KEY"),
+			os.Getenv("GITHUB_SECRET"),
 			"http://localhost:8080/auth/github/callback",
 		),
 	)
@@ -169,8 +169,8 @@ func handleEmailSubscription(w http.ResponseWriter, r *http.Request) {
 }
 
 func sendConfirmationEmail(to, link string) {
-	from := os.Getenv("idyllacg@gmail.com") //SMTP_EMAIL
-	password := os.Getenv("rdip stjn kkwq xdvf") //SMTP_PASS
+	from := os.Getenv("SMTP_EMAIL") 
+	password := os.Getenv("SMTP_PASS") 
 
 	subject := "Please verify your email"
 	body := fmt.Sprintf("Click the link to confirm:\n%s", link)
